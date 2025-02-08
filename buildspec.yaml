@@ -1,0 +1,13 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo Entered the build spec
+      - mvn clean package
+  post_build:
+    commands:
+      - echo build complete success
+artifacts:
+  files:
+    - target/CI_CD.jar
+  discard-paths: yes
